@@ -46,6 +46,10 @@
         flex-wrap: wrap;
     }
 
+    .wrapper div{
+        width: 33%;
+    }
+
     .four{
        order: 6;
     }
@@ -60,6 +64,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .wrapper div{
+        width: 50%;
     }
 
     .one{
@@ -92,6 +100,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .wrapper div{
+        width: 100%;
     }
 }
 
