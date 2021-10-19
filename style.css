@@ -1,7 +1,12 @@
-.wrapper{
-    display: flex;
+.grid {
+    display: grid;
+    grid-template-areas:
+                         "one two three"
+                         "six five four";
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(3, minmax(300px,auto));
     justify-content: center;
-    flex-wrap: wrap;
+    align-content: center;
 }
 
 .one, .two, .three, .four, .five, .six{
@@ -17,41 +22,45 @@
 
 .one{
     background: red;
+    grid-area: one;
 }
 
 .two{
     background: #ce0000;
+    grid-area:two;
 }
 
 .three{
     background: #9a0000;
+    grid-area:three;
 }
 
 .four{
     background: #620000;
+    grid-area:four;
 }
 
 .five{
     background: #500101;
+    grid-area:five;
 }
 
 .six{
     background: black;
+    grid-area:six;
 }
 
 @media only screen and (min-width: 1050px ) and (max-width: 1800px) {
-    .wrapper{
-        display: flex;
+    .grid{
+        display: grid;
+        grid-template-areas: "one two three"
+                            "six five four";
         justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .wrapper div{
-        width: 33%;
+        align-content: center;
     }
 
     .four{
-       order: 6;
+        order: 6;
     }
 
     .five{
@@ -60,14 +69,13 @@
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1049px){
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    .grid{
+       grid-template-areas: "one two"
+                            "four three"
+                            "five six";
 
-    .wrapper div{
-        width: 50%;
+        grid-template-rows: repeat(3, 300px);
+        grid-template-columns: repeat(2, minmax(300px,auto));
     }
 
     .one{
@@ -96,14 +104,16 @@
 }
 
 @media only screen and (min-width: 450px) and (max-width: 749px) {
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    .grid{
+        grid-template-areas: "one"
+                            "two"
+                            "three"
+                            "four"
+                            "five"
+                            "six";
 
-    .wrapper div{
-        width: 100%;
+        grid-template-rows: repeat(6, 300px);
+        grid-template-columns: repeat(1, minmax(300px,auto));
     }
 }
 
